@@ -1,6 +1,12 @@
 # Dockerized FastAPI Application with Jenkins, Prometheus & Grafana
 
-## Project Overview
+## 👨‍💻 Developed By
+
+**Krityanjay Prajapati**
+
+---
+
+# 📌 Project Overview
 
 This project demonstrates how to:
 
@@ -10,11 +16,11 @@ This project demonstrates how to:
 - Create a Jenkins CI/CD pipeline
 - Monitor the application using Prometheus & Grafana
 
-Repository contains a simple FastAPI application with APIs to manage users stored in a JSON file.
+The application stores user data inside a JSON file instead of using a database.
 
 ---
 
-# Tech Stack
+# 🚀 Tech Stack
 
 - FastAPI
 - Docker
@@ -25,7 +31,7 @@ Repository contains a simple FastAPI application with APIs to manage users store
 
 ---
 
-# API Endpoints
+# 📡 API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -36,7 +42,7 @@ Repository contains a simple FastAPI application with APIs to manage users store
 
 ---
 
-# Project Structure
+# 📁 Project Structure
 
 ```bash
 docker-fastapi-test/
