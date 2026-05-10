@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+
+  fastapi-app:
+    build: .
+    container_name: fastapi-app
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - user_data:/app/data
+
+  blackbox-exporter:
+    image: prom/blackbox-exporter
+    container_name: blackbox-exporter
+
+    ports:
+      - "9115:9115"
+
+    depends_on:
+      - fastapi-app
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+
+    ports:
+      - "9090:9090"
+
+    depends_on:
+      - blackbox-exporter
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - prometheus
+
+volumes:
+  user_data:
